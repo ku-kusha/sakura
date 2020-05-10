@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*News Line*/
+.news-line-container{
+    @apply relative w-full h-32;
+}
+.news-line-dates {
+    @apply relative w-full h-32;
+}
+.news-line-line {
+    @apply absolute h-px bg-s-medium-gray;
+}
+.news-line-event {
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    @apply absolute w-full transform -translate-x-full opacity-0;
+}
+.news-line-event--selected {
+    @apply relative opacity-100 transform translate-x-0;
+}
+.news-line-event--enter-right, .news-line-event--leave-right{
+    animation-name: nl-enter-right;
+}
+.news-line-event--enter-left, .news-line-event--leave-left{
+    animation-name: nl-enter-left;
+}
+.news-line-event--leave-left, .news-line-event--leave-right{
+    animation-direction: reverse;
+}
+@keyframes nl-enter-right {
+    0% {
+       opacity: 0;
+       transform: translateX(100%);
+    }
+ 
+    100% {
+       opacity: 1;
+       transform: translateX(0%);
+    }
+ }
+ 
+ @keyframes nl-enter-left {
+    0% {
+       opacity: 0;
+       transform: translateX(-100%);
+    }
+ 
+    100% {
+       opacity: 1;
+       transform: translateX(0%);
+    }
+ }
+
+.glide__bullet--active{
+    @apply bg-red-600;
+}
+.modal{
+    transition: opacity 0.25s ease;
+}
+/*Tooggle DOT :)*/
+.toggle__dot {
+    top: -.25rem;
+    left: -.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input:checked ~ .toggle__dot {
+    transform: translateX(100%);
+    background-color: #e60000;
+}
+
+.toggle__dotB {
+    top: -.25rem;
+    left: -.25rem;
+    transition: all 0.3s ease-in-out;
+}
+    
+input:checked ~ .toggle__dotB {
+    transform: translateX(100%);
+    background-color: #e60000;
+}
+
+/*Glide Fixes*/
+.manufacturer-slider > .glide__track > .glide__slides > .glide__slide{
+  transform: scale(0.7);
+  transition: transform 0.5s;
+}
+.manufacturer-slider > .glide__track > .glide__slides > .glide__slide.glide__slide--active{
+    transform: scale(1) !important;
+    transition: transform 0.5s;
+}
+.manufacturer-slider > .glide__arrows > .glide__arrow--left{
+    left: 14%;
+    position: absolute;
+}
+.manufacturer-slider > .glide__arrows > .glide__arrow--right{
+    right: 14%;
+    position: absolute;
+}
+.programs-slider > .glide__arrows > .glide__arrow--left{
+    left: 4%;
+    position: absolute;
+}
+.programs-slider > .glide__arrows > .glide__arrow--right{
+    right: 4%;
+    position: absolute;
+}
+.news-slider > .glide__arrows > .glide__arrow--right{
+    right: 4%;
+    position: absolute;
+}
+.news-slider > .glide__arrows > .glide__arrow--left{
+    left: 4%;
+    position: absolute;
+}
+/*END Glide Fixes*/

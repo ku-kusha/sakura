@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/build/sakura.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.core.min.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <nav>
+            <div id="navMobile" class="fixed top-0 right-0 z-40 overflow-x-hidden w-0 h-full">
+                <div class="flex h-full">
+                    <div class="flex-none p-4 bg-opacity-50 bg-gray-900">
+                        <a href="javascript:void(0)" onclick="closeMobileNav()">
+                            <img src="/img/close.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="flex-auto text-black bg-white">
+                        <a href="tel:+74951201155" class="block text-center text-3xl font-semibold text-s-dark-gray pt-4"><i class="pr-1"><img src="/img/phone_icon_black.svg" alt="" class="w-6 inline-block pb-2"></i>+7 (495) 120 11 55</a>
+                        <button class="block mx-auto mt-4 mb-8 px-4 pb-4 pt-3 border-2 rounded-md border-s-red text-s-red text-center text-2xl">Заказать звонок</button>
+                        <div class="h-10 bg-s-light-gray"></div>
+                        <ul class="list-reset items-center uppercase pt-4">
+                            <li class="text-right mx-12">
+                                <a class="inline-block py-4 px-4 text-xl text-black font-bold no-underline" href="#">О Компании </a>
+                                <img src="/img/mobile_menu_arrow.svg" alt="" class="inline-block pb-1">
+                                <hr class="">
+                            </li>
+                            <li class="text-right mx-12">
+                                <a class="inline-block py-4 text-black text-xl no-underline font-bold py-2 px-4" href="/catalog.html">Каталог</a>
+                                <img src="/img/mobile_menu_arrow.svg" alt="" class="inline-block pb-1">
+                                <hr class="">
+                            </li>
+                            <li class="text-right mx-12">
+                                <a class="inline-block py-4 text-black text-xl no-underline font-bold py-2 px-4" href="#">Гарантии</a>
+                                <img src="/img/mobile_menu_arrow.svg" alt="" class="inline-block pb-1">
+                                <hr class="">
+                            </li>
+                            <li class="text-right mx-12">
+                                <a class="inline-block py-4 text-black text-xl no-underline font-bold py-2 px-4" href="#">Где Купить</a>
+                                <img src="/img/mobile_menu_arrow.svg" alt="" class="inline-block pb-1">
+                                <hr class="">
+                            </li>
+                            <li class="text-right mx-12">
+                                <a class="inline-block py-4 text-black text-xl no-underline font-bold py-2 px-4" href="#">Для Дилеров</a>
+                                <img src="/img/mobile_menu_arrow.svg" alt="" class="inline-block pb-1">
+                                <hr class="">
+                            </li>
+                            <li class="text-right mx-12">
+                                <a class="inline-block py-4 text-black text-xl no-underline font-bold py-2 px-4" href="#">Контакты</a>
+                                <img src="/img/mobile_menu_arrow.svg" alt="" class="inline-block pb-1">
+                                <hr class="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--Fixed Gray Part-->
+            <div id="mobile-fixed" class="fixed w-full z-10 lg:h-24 bg-white lg:bg-s-gray z-30">
+                <div class="flex justify-between p-2 lg:hidden">
+                    <div class="w-32  relative z-10">
+                        <div class="absolute">
+                            <a class="left-0 top-0 lg:w-28 no-underline hover:no-underline" href="/index.html">
+                                <img src="/img/logo.png" alt="Sakura" class="w-full">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <button
+                            id="nav-toggle"
+                            class="text-gray-900 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
+                            onclick="openMobileNav()"
+                        >
+                            <svg
+                            class="fill-current h-10 w-10"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <title>Меню</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="desktopFixed" class="container w-full mx-auto hidden lg:block">
+                    <div class="flex pt-8">
+                        <div class="flex-grow">
+                            <a href="#" class="pr-4 text-gray-600 text-lg">Где купить</a>
+                            <a href="#" class="pr-4 text-gray-600 text-lg">Карьера</a>
+                        </div>
+                        <div class="flex-grow text-right pr-16">
+                            <div class="relative">
+                                <label for="search-top" class="absolute right-0 pt-1 pr-1">
+                                    <svg version="1.1" class="h-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 52.966 52.966" style="enable-background:new 0 0 52.966 52.966;" xml:space="preserve">
+                                       <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+                                       c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
+                                       C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
+                                       S32.459,40,21.983,40z"/>
+                                    </svg>
+                                </label>
+                                <input type="text" name="search-top" class="w-full h-8 border border-gray-800 bg-s-gray">
+                            </div>
+                        </div>
+                        <div class="flex-grow-0 text-right">
+                            <a href="tel:+74951201155" class="block text-lg font-semibold text-gray-900"><i class="pr-1"><img src="/img/phone_icon_black.svg" alt="" class="w-4 inline-block pb-2"></i>+7 (495) 120 11 55</a>
+                            <span class="block text-red-500 underline">Заказать звонок</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fixed Gray Part END-->
+            <!--Bottom Part-->
+            <div class="lg:flex w-full container mx-auto items-center lg:pt-28 ">
+                <div class="flex-none hidden lg:block lg:w-32 inline-block items-center z-10">
+                    <a class="no-underline hover:no-underline" href="/index.html">
+                        <img src="/img/logo.png" alt="Sakura" class="w-full">
+                    </a>
+                </div>
+                <div
+                class="flex-1 hidden lg:inline-block text-black z-20"
+                id="nav-content"
+                >
+                    <ul class="list-reset flex justify-around uppercase">
+                        <li class="ml-4">
+                        <a
+                            class="text-xl text-black font-bold no-underline"
+                            href="#"
+                            >О Компании</a
+                        >
+                        </li>
+                        <li class="ml-4">
+                        <a
+                            class="text-black text-xl no-underline font-bold hover:text-gray-800 hover:text-underline"
+                            href="/catalog.html"
+                            >Каталог</a
+                        >
+                        </li>
+                        <li class="ml-4">
+                        <a
+                            class="text-black text-xl no-underline font-bold hover:text-gray-800 hover:text-underline"
+                            href="#"
+                            >Гарантии</a
+                        >
+                        </li>
+                        <li class="ml-4">
+                        <a
+                            class="text-black text-xl no-underline font-bold hover:text-gray-800 hover:text-underline"
+                            href="#"
+                            >Где Купить</a
+                        >
+                        </li>
+                        <li class="ml-4">
+                        <a
+                            class="text-black text-xl no-underline font-bold hover:text-gray-800 hover:text-underline"
+                            href="#"
+                            >Для Дилеров</a
+                        >
+                        </li>
+                        <li class="ml-4">
+                        <a
+                            class="text-black text-xl no-underline font-bold hover:text-gray-800 hover:text-underline"
+                            href="#"
+                            >Контакты</a
+                        >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--Bottom Part END-->
+        </nav>
+    </header>
+    <!--Header END-->
+
+    <main class="pt-28 lg:pt-2">
+        <!--Content-->
+        <h1 class="pt-4 text-4xl">Привет каталог!</h1>
+        <!--Content END-->
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="bg-red-700 p-6 bg-scroll" style="background-image: url(/img/bg_bottom.png)">
+            <h1 class="pb-3 text-center text-white text-2xl font-bold lg:hidden">Остались вопросы?</h1>
+            <h1 class="pb-3 text-center text-white text-2xl font-bold lg:block">У Вас остались вопросы?</h1>
+            <form action="" class="container mx-auto lg:flex">
+                <div class="relative lg:flex-1 lg:p-0 lg:mr-4">
+                    <label for="name" class="absolute text-xl text-gray-200 absolute pl-4 pt-4 lg:pt-3">Имя</label>
+                    <input type="text" name="name" id="" class="w-full p-4 text-gray-100 outline-none lg:rounded-md">
+                </div>
+                <div class="relative pt-6 lg:flex-1 lg:p-0 lg:mr-4">
+                    <label for="phone" class="absolute text-xl text-gray-200 absolute pl-4 pt-4 lg:pt-3">Телефон</label>
+                    <input type="tel" name="phone" id="" class="w-full p-4 text-gray-100 outline-none lg:rounded-md">
+                </div>
+                <div class="relative pt-6 lg:flex-1 lg:p-0 lg:mr-4">
+                    <button class="w-full p-4 lg:p-1 lg:h-full lg:rounded-md border-4 rounded-sm border-white text-2xl text-white font-semibold">Отправить</button>
+                </div>
+            </form>
+        </div>
+        <div class="pt-4 lg:hidden">
+            <div class="flex justify-center pt-4">
+                <a href="#" class="mx-2 text-lg underline font-semibold">Сервис</a>
+                <a href="#" class="mx-2 text-lg underline font-semibold">Гарантия</a>
+                <a href="#" class="mx-2 text-lg underline font-semibold">Бланк рекламации</a>
+            </div>
+            <div class="flex justify-center pt-4">
+                <div class="mx-2 text-lg underline font-semibold">Корпоративным клиентам</div>
+            </div>
+            <div class="flex justify-center pt-4">
+                <div class="mx-2 text-lg underline font-semibold">Розничным покупателям</div>
+            </div>
+            <div class="flex justify-center pt-4">
+                <div class="mx-2 text-lg underline font-semibold">Партнерам</div>
+                <div class="mx-2 text-lg underline font-semibold">Акции</div>
+            </div>
+        </div>
+        <div class="flex justify-center pt-6 lg:hidden">
+            <a href="tel:+74951201155" class="text-4xl font-semibold underline text-gray-700"><i class="pr-1"><img src="/img/phone_icon.svg" alt="" class="w-8 inline-block pb-2"></i>+7 (495) 120 11 55</a>
+        </div>
+        <div class="flex justify-center pt-6 lg:hidden">
+            <h3 class="text-2xl"><i class="pr-1"><img src="/img/dot_icon.svg" alt="" class="w-6 inline-block pb-2"></i> Москва, ул.Новаторов, д. 1</h3>
+        </div>
+        <div class="flex justify-center lg:hidden">
+            <button class="modal-open underline text-xl">Посмотреть на карте</button>
+        </div>
+        <div class="pt-6 lg:hidden">
+            <div class="flex justify-center pt-4">
+                <a href="#" class="mx-2 text-lg underline font-semibold">Полезные сведения</a>
+                <a href="#" class="mx-2 text-lg underline font-semibold">Где купить</a>
+            </div>
+            <div class="flex justify-center pt-4">
+                <a href="#" class="mx-2 text-lg underline font-semibold">Файлы с фотографиями продукции</a>
+            </div>
+            <div class="flex justify-center pt-4">
+                <a href="#" class="mx-2 text-lg underline font-semibold">Документация</a>
+                <a href="#" class="mx-2 text-lg underline font-semibold">Отзывы</a>
+            </div>
+        </div>
+        <div class="pt-6 lg:hidden">
+            <div class="flex justify-center"><a href="mailto:info@sakura-printing.ru" class="text-sm text-gray-800">По общим вопросам <span class="underline text-gray-700">info@sakura-printing.ru</span></a></div>
+            <div class="flex justify-center pt-2"><a href="mailto:sales@sakura-printing.ru" class="text-sm text-gray-800">По вопросам партнерства: <span class="underline text-gray-700">sales@sakura-printing.ru</span></a></div>
+        </div>
+        <div class="py-8 lg:hidden">
+            <div class="flex justify-center"><a href="#" class="text-lg underline">Регламенты сайта</a></div>
+            <div class="flex justify-center"><a href="#" class="text-lg underline">Политика конфиденциальности</a></div>
+        </div>
+        <div class="mx-24 mb-8 hidden sm:hidden md:hidden lg:block xl:block">
+            <div class="flex">
+                <div class="w-5/8 mt-8 mx-4 text-justify">
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Сервис</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Гарантия</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Бланк рекламации</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Корпоративным клиентам</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Розничным покупателям</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Партнерам</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Акции</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Полезные сведения</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Где купить</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Файлы с фотографиями продукции</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Документация</a>
+                    <a href="#" class="mx-1 text-md underline font-semibold mr-4 pt-4 inline-block">Отзывы</a>
+                    <div class="pt-5 pl-1">
+                        <div class="inline-block"><a href="mailto:info@sakura-printing.ru" class="text-sm">По общим вопросам <span class="underline">info@sakura-printing.ru</span></a> | </div>
+                        <div class="inline-block pt-2"><a href="mailto:sales@sakura-printing.ru" class="text-sm">По вопросам партнерства: <span class="underline">sales@sakura-printing.ru</span></a></div>
+                    </div>
+                    <div class="py-3 pl-1">
+                        <div class="inline-block"><a href="#" class="text-lg underline">Регламенты сайта</a> | </div>
+                        <div class="inline-block"><a href="#" class="text-lg underline">Политика конфиденциальности</a></div>
+                    </div>
+                </div>
+                
+                <div class="w-1/4 pt-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1591.0958087833756!2d37.524484132745705!3d55.669004364611915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54d1d0df7af5b%3A0x67b05adbda6c0199!2z0JzQvdC-0LPQvtGE0YPQvdC60YbQuNC-0L3QsNC70YzQvdGL0Lkg0LrQvtC80L_Qu9C10LrRgSAi0J_Rj9GC0Ywg0J_RgNGD0LTQvtCyIg!5e0!3m2!1sru!2sru!4v1588687696133!5m2!1sru!2sru" height="190" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="block w-full"></iframe>
+                </div>
+                <div class="w-1/4 pt-12">
+                    <div class="flex">
+                        <div class="w-1/3 pl-4">
+                            <img src="/img/logo.png" alt="Sakura" class="pt-4 w-full mx-auto inline-block">
+                        </div>
+                        <div class="w-2/3">
+                            <a href="tel:+74951201155" class="block text-center text-2xl font-semibold text-gray-700 pt-2"><i class="pr-1"><img src="/img/phone_icon.svg" alt="" class="w-4 inline-block"></i>+7 (495) 120 11 55</a>
+                            <h3 class="block text-center text-md pt-2"><i class="pr-1"><img src="/img/dot_icon.svg" alt="" class="w-4 inline-block pb-2"></i> Москва, ул.Новаторов, д. 1</h3>
+                            <div class="block text-center">
+                                <button class=" border-2 rounded-md border-s-red px-4 py-2 text-s-red text-center">Заказать звонок</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer END-->
+
+    <!--Modal-->
+    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+        
+        <div class="modal-container w-full h-full bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        
+        <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+            <span class="text-sm">(Esc)</span>
+        </div>
+
+        <!-- Add margin if you want to see some of the overlay behind the modal-->
+        <div class="modal-content w-full h-full py-4 text-left px-6">
+            <!--Title-->
+            <div class="flex justify-between items-center pb-3">
+            <p class="text-2xl font-bold">Карта</p>
+            <div class="modal-close cursor-pointer z-50">
+                <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                </svg>
+            </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.132732577648!2d37.5224783159273!3d55.669291980531106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54d1d0df7af5b%3A0xa4e175ec61e67138!2z0YPQuy4g0J3QvtCy0LDRgtC-0YDQvtCyLCAxLCDQnNC-0YHQutCy0LAsIDExOTQyMQ!5e0!3m2!1sru!2sru!4v1588256304884!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+        </div>
+        </div>
+    </div>
+    <!--Modal END-->
+    
+    <!-- Scripts -->
+    
+    <!--Glide-->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
+    <!--Glide END-->
+    <!--JS-->
+    <script>
+        /*Mobile Menu Scroll*/
+        let scrollPos = window.scrollY;
+        let mobileFixed = document.getElementById("mobile-fixed");
+
+        document.addEventListener('scroll', function() {
+        
+            scrollPos = window.scrollY;
+
+            if(scrollPos > 10){
+                mobileFixed.classList.add("bg-s-gray");
+                mobileFixed.classList.add("shadow");
+            }
+            else {
+                mobileFixed.classList.remove("bg-s-gray");
+                mobileFixed.classList.remove("shadow");
+            }
+
+        });
+        /*Mobile Menu*/
+        function openMobileNav(){
+            let el;
+            el = document.getElementById("navMobile");
+            el.classList.remove('w-0');
+            el.classList.add('w-full');
+        }
+        function closeMobileNav(){
+            let el;
+            el = document.getElementById("navMobile");
+            el.classList.remove('w-full');
+            el.classList.add('w-0');
+        }
+
+        /*Modal*/
+        var openmodal = document.querySelectorAll('.modal-open')
+        for (var i = 0; i < openmodal.length; i++) {
+        openmodal[i].addEventListener('click', function(event){
+            event.preventDefault()
+            toggleModal()
+        })
+        }
+        
+        const overlay = document.querySelector('.modal-overlay')
+        overlay.addEventListener('click', toggleModal)
+        
+        var closemodal = document.querySelectorAll('.modal-close')
+        for (var i = 0; i < closemodal.length; i++) {
+        closemodal[i].addEventListener('click', toggleModal)
+        }
+        
+        document.onkeydown = function(evt) {
+        evt = evt || window.event
+        var isEscape = false
+        if ("key" in evt) {
+            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+        } else {
+            isEscape = (evt.keyCode === 27)
+        }
+        if (isEscape && document.body.classList.contains('modal-active')) {
+            toggleModal()
+        }
+        };
+        
+        
+        function toggleModal () {
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.modal')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
+        }
+        /*Cartridge Switch*/
+        function cardSwitch (eId){
+            let chkBox, imgHidd, imgDisp;            
+            chkBox = document.getElementById(eId);
+            if(chkBox.checked){
+                imgDisp = document.getElementsByClassName('cartridge');
+                Array.prototype.forEach.call(imgDisp, function(el){
+                    //console.log(el.classList);
+                    el.classList.remove('hidden');
+                });
+                imgHidd = document.getElementsByClassName('package');                
+                Array.prototype.forEach.call(imgHidd, function(el){
+                    el.classList.add('hidden');
+                });
+            }
+            else{
+                imgDisp = document.getElementsByClassName('package');
+                Array.prototype.forEach.call(imgDisp, function(el){
+                    //console.log(el.classList);
+                    el.classList.remove('hidden');
+                });
+                imgHidd = document.getElementsByClassName('cartridge');                
+                Array.prototype.forEach.call(imgHidd, function(el){
+                    el.classList.add('hidden');
+                });
+            }
+        }
+
+      </script>
+      <!--JS END-->
+</body>
+</html>
